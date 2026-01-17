@@ -28,7 +28,7 @@ void main(void)
         // Get current joypad data
         joypadCurrent = joypad();
 
-        UpdateTwoFrameCounter();
+        UpdateThreeFrameCounter();
 
         uint8_t lastSprite = 0;
 
