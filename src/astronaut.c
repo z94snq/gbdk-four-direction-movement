@@ -11,7 +11,7 @@
 
 #define ASTRONAUT_SPEED 5
 
-extern uint8_t joypadCurrent, joypadPrevious, twoFrameRealValue;
+extern uint8_t joypadCurrent, joypadPrevious, threeFrameRealValue;
 
 extern const int16_t directions[9][2];
 
@@ -102,22 +102,22 @@ uint8_t UpdateAstronaut(){
         // for 'left' tiles we will flip 'right' tiles
         switch (astronautDirection) {
         case J_DOWN:
-            astronautMetasprite = AstronautDown_metasprites[twoFrameRealValue];
+            astronautMetasprite = AstronautDown_metasprites[threeFrameRealValue];
             flipAstronaut = FALSE;
             break;
-        
+
         case J_RIGHT:
-            astronautMetasprite = AstronautRight_metasprites[twoFrameRealValue];
+            astronautMetasprite = AstronautRight_metasprites[threeFrameRealValue];
             flipAstronaut = FALSE;
             break;
 
         case J_LEFT:
-            astronautMetasprite = AstronautRight_metasprites[twoFrameRealValue];
+            astronautMetasprite = AstronautRight_metasprites[threeFrameRealValue];
             flipAstronaut = TRUE;
             break;
 
         case J_UP:
-            astronautMetasprite = AstronautDown_metasprites[twoFrameRealValue];
+            astronautMetasprite = AstronautUp_metasprites[threeFrameRealValue];
             flipAstronaut = FALSE;
             break;
         }
