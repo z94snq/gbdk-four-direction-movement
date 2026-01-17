@@ -1,1 +1,16 @@
-C:\gbdk\bin\lcc.exe -Iheaders -Wm-yC -o rom.gb src/main.c src/common.c src/link.c src/moblin.c src/graphics/LinkDown.c src/graphics/LinkRight.c src/graphics/LinkUp.c src/graphics/Moblin.c src/graphics/palettes.c
+param(
+    [switch]$Debug,
+    [switch]$Clean
+)
+
+if ($Clean) {
+    rm -Recurse -Force build -ErrorAction SilentlyContinue
+}
+
+$buildType = if ($Debug) { "Debug" } else { "Release" }
+
+mkdir build -Force
+cd build
+cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE="$buildType"
+make
+cd ..
