@@ -1,0 +1,1 @@
+C:\gbdk\bin\lcc.exe -Iheaders -Wm-yC -o rom.gb src/main.c src/common.c src/link.c src/moblin.c src/graphics/LinkDown.c src/graphics/LinkRight.c src/graphics/LinkUp.c src/graphics/Moblin.c src/graphics/palettes.c
