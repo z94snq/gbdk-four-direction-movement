@@ -45,8 +45,21 @@ cd ..
 
 Use `-DCMAKE_BUILD_TYPE=Debug` for debug build.
 
+## Generate Graphics Assets
+
+To generate assets file from png we use png2asset, here are the commands we use:
+
+```
+C:\gbdk\bin\png2asset.exe AstronautDown.png -sw 16 -sh 16 -keep_palette_order
+C:\gbdk\bin\png2asset.exe AstronautRight.png -sw 16 -sh 16 -keep_palette_order
+C:\gbdk\bin\png2asset.exe AstronautUp.png -sw 16 -sh 16 -keep_palette_order
+C:\gbdk\bin\png2asset.exe Cat.png -sw 16 -sh 16 -keep_palette_order
+C:\gbdk\bin\png2asset.exe palettes.png -sw 16 -sh 16 -keep_palette_order
+```
+
 ## Resources
 - GBDK: https://github.com/gbdk-2020/gbdk-2020
+- GB Studio SciFi Character Assets by The Pixel Nook: https://the-pixel-nook.itch.io/gb-studio-scifi-characters
 - Aseprite: https://www.aseprite.org/
 - png2asset Tutorial: https://laroldsretrogameyard.com/tutorials/gb/png2asset-graphics-creation-for-gbdk-2020
 - RPG Style Movement Tutorial: https://laroldsretrogameyard.com/tutorials/gb/rpg-style-movement-in-gbdk/

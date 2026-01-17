@@ -37,7 +37,7 @@ add_custom_command(
     OUTPUT ${CMAKE_BINARY_DIR}/rom.gb
     COMMAND ${LCC} ${DEBUG_FLAGS} -I${CMAKE_SOURCE_DIR}/headers -Wm-yC -o ${CMAKE_BINARY_DIR}/rom.gb ${SOURCES} ${ASMSOURCES}
     DEPENDS ${SOURCES} ${ASMSOURCES} ${HEADERS}
-    COMMENT "Building Game Boy ROM: ${CMAKE_BINARY_DIR}/rom.gb"
+    COMMENT "Building GB ROM: ${CMAKE_BINARY_DIR}/rom.gb"
 )
 
 add_custom_target(rom.gb ALL DEPENDS ${CMAKE_BINARY_DIR}/rom.gb)

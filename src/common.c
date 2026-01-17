@@ -20,7 +20,7 @@ uint8_t twoFrameCounter = 0;
 uint8_t twoFrameRealValue = 0;
 
 /**
- * @brief Our moblin and link has two frame walk animation. They will share a common variable that determines which frame to show when they are walking.
+ * @brief Our astronaut and cat has two frame walk animation. They will share a common variable that determines which frame to show when they are walking.
  */
 void UpdateTwoFrameCounter(){
     twoFrameCounter += 3;

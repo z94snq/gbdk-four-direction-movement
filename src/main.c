@@ -5,8 +5,8 @@
 
 #include "common.h"
 #include "graphics/palettes.h"
-#include "link.h"
-#include "moblin.h"
+#include "astronaut.h"
+#include "cat.h"
 
 void main(void)
 {
@@ -19,9 +19,9 @@ void main(void)
     // Set color palettes into vram
     set_sprite_palette(0, palettes_PALETTE_COUNT, palettes_palettes);
 
-    // Setup link & moblin
-    SetupLink();
-    SetupMoblin();
+    // Setup astronaut & cat
+    SetupAstronaut();
+    SetupCat();
 
     // Loop forever
     while(1){
@@ -32,8 +32,8 @@ void main(void)
 
         uint8_t lastSprite = 0;
 
-        lastSprite += UpdateLink();
-        lastSprite += UpdateMoblin(lastSprite);
+        lastSprite += UpdateAstronaut();
+        lastSprite += UpdateCat(lastSprite);
 
         // Hide extra sprites
         hide_sprites_range(lastSprite, 40);
