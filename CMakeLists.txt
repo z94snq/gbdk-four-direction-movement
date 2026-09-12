@@ -43,7 +43,7 @@ add_custom_command(
     COMMENT "Building GB ROM: ${CMAKE_BINARY_DIR}/rom.gb"
 )
 
-add_custom_target(rom.gb ALL DEPENDS ${CMAKE_BINARY_DIR}/rom.gb)
+add_custom_target(rom ALL DEPENDS ${CMAKE_BINARY_DIR}/rom.gb)
 
 # Register additional files for cleaning
 set_property(DIRECTORY APPEND PROPERTY ADDITIONAL_CLEAN_FILES
