@@ -5,9 +5,9 @@ GBDK RPG game style movement
 - Windows OS
 - GBDK-2020 >= 4.5.0
 - CMake >= 4.2.1
-- GNU Make >= 4.4.1
+- Ninja >= 1.13.2
 
-**TIPS:** You can use [Chocolatey](https://community.chocolatey.org/) to install CMake and GNU Make easily: `choco install cmake` `choco install make`
+**TIPS:** You can use `winget` to install dependencies: `winget install cmake Ninja-build.Ninja`
 
 ## Build Instructions
 
@@ -38,8 +38,8 @@ To build manually using CMake:
 ```powershell
 mkdir build
 cd build
-cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
-make
+cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE=Release
+ninja
 cd ..
 ```
 

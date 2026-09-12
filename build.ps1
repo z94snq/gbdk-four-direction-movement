@@ -11,6 +11,6 @@ $buildType = if ($Debug) { "Debug" } else { "Release" }
 
 mkdir build -Force
 cd build
-cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE="$buildType"
-make
+cmake .. -G "Ninja" -DCMAKE_BUILD_TYPE="$buildType"
+ninja
 cd ..
